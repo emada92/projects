@@ -13,7 +13,7 @@ image = next(ds)["image"]  # take only one image
 model = hub.load("https://tfhub.dev/tensorflow/faster_rcnn/resnet50_v1_640x640/1")
 res = model([image])  # make prediction; input should be collection of images
 
-# get dimensions of the image; we will need it later
+# get dimensions of the image
 im_h, im_w, im_c = image.numpy().shape
 
 # prepare axes for plotting; load image
